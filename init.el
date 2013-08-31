@@ -1,3 +1,5 @@
+(setq custom-file (concat user-emacs-directory "custom-file.el"))
+
 (require 'cl)
 
 (defmacro dowith (destr-var action &rest qlist)
@@ -15,8 +17,6 @@
       "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
-
-(setq custom-file (concat user-emacs-directory "custom-file.el"))
 
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
