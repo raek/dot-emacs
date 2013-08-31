@@ -1,4 +1,5 @@
 (setq custom-file (concat user-emacs-directory "custom-file.el"))
+(load custom-file)
 
 (require 'cl)
 
