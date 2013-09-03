@@ -17,10 +17,6 @@
 
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
-(fset 'my-complete-lisp-symbol
-      (make-hippie-expand-function '(try-complete-lisp-symbol-partially
-                                     try-complete-lisp-symbol)))
-
 (dowith load-file
     (load (concat user-emacs-directory "init-" load-file))
   "bindings"

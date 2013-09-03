@@ -1,3 +1,7 @@
+(fset 'my-complete-lisp-symbol
+      (make-hippie-expand-function '(try-complete-lisp-symbol-partially
+                                     try-complete-lisp-symbol)))
+
 (dowith (key . command)
     (global-set-key (kbd key) command)
 
