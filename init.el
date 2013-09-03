@@ -11,10 +11,6 @@
          (destructuring-bind ,destr-var ,var-symbol
            ,action)))))
 
-(require 'package)
-
-(package-initialize)
-
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 (fset 'my-complete-lisp-symbol
