@@ -6,9 +6,10 @@
 
 (setq packages-to-install '(
   better-defaults
-  smex
-  paredit
+  buffer-move
   git-commit-mode
+  paredit
+  smex
   ))
 
 (dolist (package packages-to-install)

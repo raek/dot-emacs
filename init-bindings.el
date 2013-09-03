@@ -2,6 +2,11 @@
       (make-hippie-expand-function '(try-complete-lisp-symbol-partially
                                      try-complete-lisp-symbol)))
 
+(autoload 'buf-move-up    "buffer-move")
+(autoload 'buf-move-down  "buffer-move")
+(autoload 'buf-move-left  "buffer-move")
+(autoload 'buf-move-right "buffer-move")
+
 (dowith (key . command)
     (global-set-key (kbd key) command)
 
@@ -18,6 +23,12 @@
 
   ;; Align point to beginning of words on the previous line.
   ("§" . indent-relative)
+
+  ;; Swap the current buffer into another window
+  ("<C-S-up>"    . buf-move-up)
+  ("<C-S-down>"  . buf-move-down)
+  ("<C-S-left>"  . buf-move-left)
+  ("<C-S-right>" . buf-move-right)
 
 
 
