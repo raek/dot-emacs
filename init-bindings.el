@@ -30,6 +30,11 @@
   ("<C-S-left>"  . buf-move-left)
   ("<C-S-right>" . buf-move-right)
 
+  ;; Switch to next and previous buffers in "window history" (like in
+  ;; a browser)
+  ("<M-left>"  . previous-buffer)
+  ("<M-right>" . next-buffer)
+
 
 
   ;; The rest are from emacs-starter-kit
