@@ -11,6 +11,10 @@
          (destructuring-bind ,destr-var ,var-symbol
            ,action)))))
 
+(condition-case nil
+    (load (concat user-emacs-directory "init-local"))
+  (file-error 'skipped))
+
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 (fset 'my-complete-lisp-symbol
