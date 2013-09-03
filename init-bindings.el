@@ -27,7 +27,16 @@
   ("<backtab>" . dabbrev-expand)
 
   ;; Align point to beginning of words on the previous line.
-  ("§" . indent-relative)
+  ("M-§" . indent-relative)
+
+  ;; Switch to the other window
+  ("§" . other-window)
+
+  ;; Switch to other window by arrow key
+  ("<S-up>"    . windmove-up)
+  ("<S-down>"  . windmove-down)
+  ("<S-left>"  . windmove-left)
+  ("<S-right>" . windmove-right)
 
   ;; Swap the current buffer into another window
   ("<C-S-up>"    . buf-move-up)
