@@ -60,6 +60,9 @@
   ;; Visit init file
   ("C-c i" . raek-visit-init)
 
+  ;; Shortcut to compile
+  ("C-å" . compile)
+
 
 
   ;; The rest are from emacs-starter-kit
