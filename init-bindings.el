@@ -66,6 +66,11 @@
   ;; Shortcut to package.el menu
   ("C-c p" . list-packages)
 
+  ;; Remove indentation at beginning of line and append the remaining
+  ;; part to the above line. (The original M-^ key cannot be typed on
+  ;; Swedish keyboards)
+  ("M-¤" . delte-indentation)
+
 
 
   ;; The rest are from emacs-starter-kit
