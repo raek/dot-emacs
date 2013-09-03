@@ -71,6 +71,9 @@
   ;; Swedish keyboards)
   ("M-¤" . delte-indentation)
 
+  ;; Jump to a "definition" in the current buffer
+  ("C-c m" . imenu)
+
 
 
   ;; The rest are from emacs-starter-kit
