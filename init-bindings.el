@@ -7,6 +7,11 @@
 
 (add-hook 'dired-mode-hook 'raek-dired-mode-hook)
 
+(defun raek-visit-init ()
+  "Visit my init.el file."
+  (interactive)
+  (find-file (concat user-emacs-directory "init.el")))
+
 (autoload 'buf-move-up    "buffer-move")
 (autoload 'buf-move-down  "buffer-move")
 (autoload 'buf-move-left  "buffer-move")
@@ -51,6 +56,9 @@
 
   ;; Visit directory above current file or directory
   ("<C-backspace>" . raek-dired-containing-directory)
+
+  ;; Visit init file
+  ("C-c i" . raek-visit-init)
 
 
 
