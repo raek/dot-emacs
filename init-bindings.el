@@ -63,6 +63,9 @@
   ;; Shortcut to compile
   ("C-å" . compile)
 
+  ;; Shortcut to package.el menu
+  ("C-c p" . list-packages)
+
 
 
   ;; The rest are from emacs-starter-kit
