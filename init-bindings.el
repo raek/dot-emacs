@@ -12,6 +12,10 @@
   (interactive)
   (find-file (concat user-emacs-directory "init.el")))
 
+(defun raek-find-tag ()
+  (interactive)
+  (find-tag (find-tag-default)))
+
 (autoload 'buf-move-up    "buffer-move")
 (autoload 'buf-move-down  "buffer-move")
 (autoload 'buf-move-left  "buffer-move")
@@ -73,6 +77,11 @@
 
   ;; Jump to a "definition" in the current buffer
   ("C-c m" . imenu)
+
+  ;; Don't confirm, just do it!
+  ("M-."     . raek-find-tag)
+  ;; The old function:
+  ("C-c M-." . find-tag)
 
 
 
