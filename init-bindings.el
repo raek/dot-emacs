@@ -1,7 +1,3 @@
-(fset 'my-complete-lisp-symbol
-      (make-hippie-expand-function '(try-complete-lisp-symbol-partially
-                                     try-complete-lisp-symbol)))
-
 (autoload 'buf-move-up    "buffer-move")
 (autoload 'buf-move-down  "buffer-move")
 (autoload 'buf-move-left  "buffer-move")
