@@ -1,3 +1,12 @@
+(defun raek-dired-containing-directory ()
+  (interactive)
+  (dired "."))
+
+(defun raek-dired-mode-hook ()
+  (local-set-key (kbd "<C-backspace>") 'dired-up-directory))
+
+(add-hook 'dired-mode-hook 'raek-dired-mode-hook)
+
 (autoload 'buf-move-up    "buffer-move")
 (autoload 'buf-move-down  "buffer-move")
 (autoload 'buf-move-left  "buffer-move")
@@ -30,6 +39,9 @@
   ;; a browser)
   ("<M-left>"  . previous-buffer)
   ("<M-right>" . next-buffer)
+
+  ;; Visit directory above current file or directory
+  ("<C-backspace>" . raek-dired-containing-directory)
 
 
 
