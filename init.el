@@ -18,7 +18,7 @@
                                      try-complete-lisp-symbol)))
 
 (dowith load-file
-    (load (concat user-emacs-directory "init-" load-file ".el"))
+    (load (concat user-emacs-directory "init-" load-file))
   "bindings"
   "lisp"
   )
