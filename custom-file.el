@@ -6,7 +6,8 @@
  '(grep-command "grep -nr ")
  '(inhibit-startup-screen t)
  '(package-archives (quote (("marmalade" . "http://marmalade-repo.org/packages/") ("gnu" . "http://elpa.gnu.org/packages/"))))
- '(tab-always-indent (quote complete)))
+ '(tab-always-indent (quote complete))
+ '(woman-fill-frame t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
