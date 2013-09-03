@@ -22,3 +22,5 @@
   "bindings"
   "lisp"
   )
+
+(server-start)
