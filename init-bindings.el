@@ -16,6 +16,7 @@
   (interactive)
   (find-tag (find-tag-default)))
 
+;; TODO: Contribute to buffer-move.el by adding these autoloads to it
 (autoload 'buf-move-up    "buffer-move")
 (autoload 'buf-move-down  "buffer-move")
 (autoload 'buf-move-left  "buffer-move")
