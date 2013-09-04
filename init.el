@@ -23,4 +23,6 @@
   "lisp"
   )
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (server-start)
