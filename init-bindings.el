@@ -1,3 +1,5 @@
+;; -*- coding:utf-8; -*-
+
 (defun raek-dired-containing-directory ()
   (interactive)
   (dired "."))
