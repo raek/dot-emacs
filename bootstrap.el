@@ -11,6 +11,7 @@
   better-defaults
   buffer-move
   git-commit-mode
+  magit
   paredit
   smex
   ))
