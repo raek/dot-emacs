@@ -76,7 +76,7 @@
   ;; Remove indentation at beginning of line and append the remaining
   ;; part to the above line. (The original M-^ key cannot be typed on
   ;; Swedish keyboards)
-  ("M-¤" . delte-indentation)
+  ("M-¤" . delete-indentation)
 
   ;; Jump to a "definition" in the current buffer
   ("C-c m" . imenu)
