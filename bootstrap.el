@@ -3,6 +3,7 @@
              '("marmalade" .
                "http://marmalade-repo.org/packages/"))
 (package-initialize)
+(package-refresh-contents)
 
 (defun installedp (name)
   (member name (mapcar #'car package-alist)))

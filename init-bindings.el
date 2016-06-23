@@ -4,8 +4,21 @@
   (interactive)
   (dired "."))
 
+(defun raek-kill-this-buffer-and-dired-containing-directory ()
+  (interactive)
+  (let ((buffer (current-buffer)))
+    (dired ".")
+    (kill-buffer buffer)))
+
+(defun raek-kill-this-buffer-and-dired-up-directory ()
+  (interactive)
+  (let ((buffer (current-buffer)))
+    (dired-up-directory)
+    (kill-buffer buffer)))
+
 (defun raek-dired-mode-hook ()
-  (local-set-key (kbd "<C-backspace>") 'dired-up-directory))
+  (local-set-key (kbd "<C-backspace>")   'dired-up-directory)
+  (local-set-key (kbd "<C-M-backspace>") 'raek-kill-this-buffer-and-dired-up-directory))
 
 (add-hook 'dired-mode-hook 'raek-dired-mode-hook)
 
@@ -13,6 +26,11 @@
   "Visit my init.el file."
   (interactive)
   (find-file (concat user-emacs-directory "init.el")))
+
+(defun raek-visit-fd-main-aes ()
+  "Visit the FdMainAes directory."
+  (interactive)
+  (find-file "~/FdMainAes/"))
 
 (defun raek-find-tag ()
   (interactive)
@@ -61,12 +79,25 @@
   ("<M-left>"  . previous-buffer)
   ("<M-right>" . next-buffer)
 
+  ("<C-prior>" . gud-up)
+  ("<C-next>"  . gud-down)
+  ("<C-up>"    . gud-break)
+  ("<C-down>"  . gud-next)
+  ("<C-left>"  . gud-finish)
+  ("<C-right>" . gud-step)
+
   ;; Visit directory above current file or directory
   ("<C-backspace>" . raek-dired-containing-directory)
+
+  ;; Kill this buffer and visit directory above its associated file or directory
+  ("<C-M-backspace>" . raek-kill-this-buffer-and-dired-containing-directory)
 
   ;; Visit init file
   ("C-c i" . raek-visit-init)
 
+  ;; Visit FdMainAes directory
+  ("C-c f" . raek-visit-fd-main-aes)
+  
   ;; Shortcut to compile
   ("C-å" . compile)
 
@@ -86,21 +117,25 @@
   ;; The old function:
   ("C-c M-." . find-tag)
 
+  ;; Global org-mode keys
+  ("C-c l" . org-store-link)
+  ("C-c c" . org-capture)
+  ("C-c a" . org-agenda)
+  ("C-c b" . org-iswitchb)
+
 
 
   ;; The rest are from emacs-starter-kit
-
-  ;; It's all about the project.
-  ("C-c f" . find-file-in-project)
 
   ;; You know, like Readline.
   ("C-M-h" . backward-kill-word)
 
   ;; Completion that uses many different methods to find options.
-  ("M-/" . hippie-expand)
+  ;;("M-/" . hippie-expand)
+  ("M-_" . dabbrev-expand)
 
   ;; Perform general cleanup.
-  ("C-c n" . esk-cleanup-buffer)
+  ;;("C-c n" . esk-cleanup-buffer)
 
   ;; Turn on the menu bar for exploring new modes
   ("C-<f10>" . menu-bar-mode)
